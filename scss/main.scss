@@ -528,3 +528,128 @@ header {
     }
   }
 }
+
+.banner_buttons {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  .banner {
+    position: relative;
+    width: inherit;
+    height: 440px;
+    background: url(../img/banner.jpg) no-repeat center / cover;
+
+    #left_nav_1 {
+      cursor: pointer;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #right_nav_1 {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .crazy_summer {
+      height: 320px;
+      position: absolute;
+      top: 9.5%;
+      left: 15%;
+    }
+
+    .shop_now {
+      width: 156px;
+      height: 54px;
+      background: #fd926d;
+      border-bottom: 3px solid #dd6b44;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: absolute;
+      bottom: 0;
+      left: 27.7%;
+
+      h1{
+        font-size: 16px;
+        font-weight: 200;
+        color: #fff;
+        text-transform: uppercase;
+        margin-right: 17px;
+      }
+    }
+
+    .shop_now:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .small_buttons {
+    width: inherit;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .small_button {
+      width: 10px;
+      height: 10px;
+      background: #867a76;
+      border-radius: 5px;
+      margin: 10px;
+    }
+
+    .small_button_click {
+      background: #fd926d;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .banner_buttons {
+    margin-top: 17px;
+
+    .banner {
+      height: 350px;
+      background: url(../img/banner.jpg) no-repeat center / cover;
+
+      .crazy_summer {
+        height: 240px;
+        position: absolute;
+        top: 17%;
+        left: 10%;
+
+        #crazy {
+          width: 253px;
+          height: 182px;
+        }
+      }
+
+      .shop_now {
+        width: 115px;
+        height: 40px;
+        bottom: 0;
+        left: 27%;
+
+        h1{
+          font-size: 12px;
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .banner_buttons {
+    display: none;
+  }
+}
