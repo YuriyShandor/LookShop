@@ -141,7 +141,7 @@ header {
     flex-direction: column;
 
     .custom {
-      width: 640px;
+      width: 102.1%;
       height: 98px;
       background: #fafafa;
       display: flex;
@@ -389,6 +389,7 @@ header {
       padding: 0;
 
       li {
+        padding-right: 5px;
         text-align: right;
         list-style: none;
         text-transform: lowercase;
@@ -418,6 +419,7 @@ header {
         background: #d0cfcf;
 
         a {
+          padding-left: 5px;
           text-align: right;
           text-decoration: none;
           text-transform: lowercase;
@@ -651,5 +653,189 @@ header {
 @media screen and (max-width: 640px) {
   .banner_buttons {
     display: none;
+  }
+}
+
+#find {
+  width: 100%;
+  height: 55px;
+  background: #ededed;
+}
+
+.find_us {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+
+  .email {
+    width: 240px;
+    height: 28px;
+    position: relative;
+
+    form {
+      span {
+      font-size: 12px;
+      font-weight: 400;
+      color: #6b6b6b;
+      margin: 0;
+      }
+
+      input {
+        font-size: 12px;
+        font-weight: 400;
+        color: #9f9f9f;
+        font-style: italic;
+        width: 160px;
+        height: 28px;
+        margin-left: 5px;
+        outline-color: #343333;
+        padding-left: 7px;
+      }
+
+      input::placeholder {
+        font-size: 12px;
+        font-weight: 400;
+        color: #9f9f9f;
+        font-style: italic;
+      }
+    }
+
+    .plus {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fd926d;
+      border-bottom: 3px solid #dd6b44;
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+
+      img {
+        width: 11px;
+        height: auto;
+      }
+    }
+
+    .plus:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .find_us_here {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: inherit;
+    margin-left: auto;
+
+    span {
+      font-size: 12px;
+      font-weight: 400;
+      color: #6c6c6c;
+      margin-right: 15px;
+    }
+
+    .find_icon {
+      width: 55px;
+      height: 55px;
+      background: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: auto;
+        height: 18px;
+      }
+    }
+
+    .find_icon:nth-child(3){
+      background: #ededed;
+    }
+
+    .find_icon:hover {
+      background: #fd926d;
+      opacity: 0.9;
+    }
+  }
+}
+
+@media screen and (max-width:640px) {
+  #find {
+    height: auto;
+    background: none;
+  }
+
+  .find_us {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+
+    .email {
+      width: 100%;
+      height: 96px;
+      margin-top: 26px;
+
+      form {
+
+        span {
+          display: none;
+        }
+
+        input {
+          font-size: 30px;
+          width: 100%;
+          height: 96px;
+          margin-left: 0;
+          background: #ededed;
+          border: none;
+          padding-left: 30px;
+        }
+
+        input::placeholder {
+          font-size: 30px;
+        }
+      }
+
+      .plus {
+        width: 96px;
+        height: 96px;
+
+        img {
+          width: 37px;
+          height: auto;
+        }
+      }
+    }
+
+    .find_us_here {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      height: 138px;
+      margin-left: 0;
+
+      span {
+        font-size: 26px;
+        margin-right: 35px;
+      }
+
+      .find_icon {
+        width: 88px;
+        height: 88px;
+
+        img {
+          height: 30px;
+        }
+      }
+    }
   }
 }
