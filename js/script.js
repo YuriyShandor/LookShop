@@ -5,5 +5,41 @@ $(document).ready(function(){
     /*var index = $(this).index()+1;
     $(".content").removeClass("show");
     $(".content:nth-child("+ index +")").addClass("show");*/
-    });
   });
+
+  $(".charpet").click(function(){
+    $(".charpet").removeClass("charpet_click");
+    $(this).addClass("charpet_click");
+    /*var index = $(this).index()+1;
+    $(".content").removeClass("show");
+    $(".content:nth-child("+ index +")").addClass("show");*/
+  });
+
+  $(".arrow").click(function(){
+    $(".arrow").removeClass("arrow_click");
+    $(this).addClass("arrow_click");
+  });
+
+  $('.products').slick({
+    slidesToShow: 4.71,
+    slidesToScroll: 1,
+    nextArrow: $(".next_arrow"),
+    prevArrow: $(".prev_arrow"),
+    focusOnSelect: true,
+    centerMode: true,
+    centerPadding: true,
+    initialSlide: 4,
+    responsive: [
+      {
+        breakpoint: 769,
+
+        settings: {
+          slidesToShow: 3.03,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      }
+    ]
+  });
+
+});
