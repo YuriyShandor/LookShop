@@ -321,6 +321,7 @@ header {
       color: #949393;
       border: none;
       cursor: pointer;
+      outline-color: #343333;
     }
   }
 
@@ -838,4 +839,212 @@ header {
       }
     }
   }
+}
+
+@font-face {
+  font-family: Helvetica CN;
+  src:url(../fonts/HelveticaNeueLTStd-UltLtCn.otf);
+}
+
+.best_party {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 50px;
+
+  .party {
+    margin-left: 2px;
+
+    .best_sell_fall {
+      display: flex;
+      justify-content: space-between;
+
+      .best_sell {
+        width: 241px;
+        height: 169px;
+        background: url(../img/best_sellers.jpg) no-repeat center / cover;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        div {
+          width: auto;
+          height: auto;
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+          cursor: pointer;
+
+          a {
+            font-family: Helvetica CN;
+            font-size: 33px;
+            font-weight: 100;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin: 0;
+            margin-right: 10px;
+          }
+
+          a:hover {
+            color: red;
+          }
+        }
+      }
+
+      .fall_leather {
+        width: 241px;
+        height: 169px;
+        background: url(../img/fall_leather.jpg) no-repeat center / cover;
+
+        .fall_leather_shop {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 120px;
+          height: auto;
+          margin-top: 40px;
+          margin-left: 10px;
+
+          a {
+            text-align: center;
+            text-decoration: none;
+            font-size: 36px;
+            font-family: Helvetica CN;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            line-height: 0.9;
+            margin-bottom: 15px;
+          }
+
+          a:hover {
+            color: red;
+          }
+
+          .butt_shop {
+            width: 98px;
+            height: 29px;
+            background: #4fafa0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            span {
+              font-size: 12px;
+              font-weight: 400;
+              color: #fff;
+              text-transform: uppercase;
+              margin-right: 10px;
+            }
+          }
+
+          .butt_shop:hover {
+            opacity: 0.9;
+            span {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .best_party {
+    margin-top: 33px;
+
+    .best {
+      img{
+        width: 364px;
+        height: auto;
+      }
+    }
+
+    .party {
+      margin-left: 2px;
+      #party_collection {
+        width: 364px;
+        height: auto;
+      }
+
+      .best_sell_fall {
+
+        .best_sell {
+          width: 180px;
+          height: 127px;
+
+          div {
+            a {
+              font-size: 26px;
+              margin-right: 8px;
+            }
+          }
+        }
+
+        .fall_leather {
+          width: 180px;
+          height: 127px;
+
+          .fall_leather_shop {
+            width: 92px;
+            margin-top: 34px;
+            margin-left: 7px;
+
+            a {
+              font-size: 28px;
+              margin-bottom: 10px;
+            }
+
+            .butt_shop {
+              width: 75px;
+              height: 21px;
+
+              span {
+                font-size: 10px;
+                margin-right: 7px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px){
+  .best_party {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 640px){
+
+}
+
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 640px){
+
+}
+
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 640px){
+
 }
