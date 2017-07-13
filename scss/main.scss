@@ -553,7 +553,7 @@ header {
     cursor: pointer;
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 42%;
     transform: translateY(-50%);
     z-index: 1;
   }
@@ -566,7 +566,7 @@ header {
     cursor: pointer;
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 42%;
     transform: translateY(-50%);
     z-index: 1;
   }
@@ -593,15 +593,17 @@ header {
       background: #867a76;
       border-radius: 7px;
       margin: 10px;
-      outline-color: #fff;
+      outline: none;
     }
 
-    button:hover {
+    button:focus {
       background: #fd926d;
     }
   }
 
 }
+
+
 
 .slick_banner {
   width: 100%;
@@ -685,6 +687,12 @@ header {
           margin-right: 12px;
         }
       }
+    }
+  }
+
+  .slick_banner {
+    .img_ban {
+      height: 350px;
     }
   }
 }
@@ -1053,7 +1061,7 @@ header {
   }
 }
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 320px){
   .best_party {
     display: none;
   }
@@ -1129,8 +1137,13 @@ header {
   }
 }
 
+.charpet_for_iphone {
+  display: none;
+}
+
 .our_products {
   width: 1180px;
+  margin: 0 auto;
 }
 
 .content {
@@ -1143,7 +1156,7 @@ header {
 
   .products {
     width: 100%;
-    height: auto;
+    height: 395px;
     display: flex;
 
     .product {
@@ -1154,7 +1167,8 @@ header {
       flex-direction: column;
       align-items: center;
       position: relative;
-      margin-left: 32px;
+      margin-left: 31px;
+      z-index: 1;
 
       .product_img {
         width: 220px;
@@ -1205,12 +1219,30 @@ header {
         opacity: 0.9;
       }
     }
+
+    .product:hover {
+      transform: scale(1.05);
+      height: 405px;
+
+      .shop_it {
+        display: flex;
+      }
+    }
   }
 }
 
 .show {
   display: flex;
   align-items: center;
+}
+
+.load_more_iphone {
+  display: none;
+}
+
+.shop_it {
+  display: none;
+
 }
 
 @media screen and (max-width: 768px){
@@ -1231,9 +1263,112 @@ header {
   .goods_nav {
     display: none;
   }
-  .our_products {
-    display: none;
+
+  .charpet_for_iphone {
+    display: flex;
+    width: 100%;
+    height: auto;
+
+    form {
+      width: inherit;
+
+      select {
+        width: inherit;
+        height: 44px;
+        outline: none;
+        border: none;
+        background: #f4845d;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
   }
+
+  .our_products {
+    width: 100%;
+  }
+
+  .content {
+    height: 278px;
+    align-items: flex-end;
+
+    .products {
+      .product {
+        width: 137px;
+        height: 262px;
+        margin-left: 15.5px;
+        transform: translateX(-8px);
+
+        .product_img {
+          width: 137px;
+          height: 181px;
+        }
+
+        .product_title {
+          margin-top: 6px;
+          font-size: 9px;
+        }
+
+        .product_price {
+          margin-top: 6px;
+          font-size: 14px;
+        }
+
+        .add_to_cart {
+          width: 110px;
+          height: 32px;
+          margin-top: 5.5px;
+
+          span {
+            font-size: 10px;
+            margin-right: 10px;
+          }
+
+          img {
+            width: 8.5px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .load_more_iphone {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    background: #fd926d;
+
+    .load_more {
+      height: 30px;
+      width: 110px;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      span {
+        font-size: 10px;
+        font-weight: 400;
+        color: #fff;
+        text-transform: uppercase;
+      }
+
+      span:hover {
+        color: red;
+      }
+    }
+
+    .load_more:hover {
+      opacity: 0.9;
+    }
+  }
+
 }
 
 

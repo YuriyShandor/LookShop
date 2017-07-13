@@ -30,6 +30,17 @@ $(document).ready(function(){
           slidesToScroll: 1,
           infinite: true,
         }
+      },
+
+      {
+        breakpoint: 321,
+
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          nextArrow: $(".load_more"),
+        }
       }
     ]
   });
