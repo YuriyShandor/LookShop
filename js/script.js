@@ -1,12 +1,4 @@
 $(document).ready(function(){
-  $(".small_button").click(function(){
-    $(".small_button").removeClass("small_button_click");
-    $(this).addClass("small_button_click");
-    /*var index = $(this).index()+1;
-    $(".content").removeClass("show");
-    $(".content:nth-child("+ index +")").addClass("show");*/
-  });
-
   $(".charpet").click(function(){
     $(".charpet").removeClass("charpet_click");
     $(this).addClass("charpet_click");
@@ -35,6 +27,30 @@ $(document).ready(function(){
 
         settings: {
           slidesToShow: 3.03,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      }
+    ]
+  });
+
+  $('.banners').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: $("#right_nav_1"),
+    prevArrow: $("#left_nav_1"),
+    focusOnSelect: true,
+    centerMode: true,
+    centerPadding: true,
+    initialSlide: 4,
+    dots: true,
+    dotsClass: "slick-dots_my",
+    responsive: [
+      {
+        breakpoint: 769,
+
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
         }
