@@ -1633,6 +1633,7 @@ header {
   }
 
   #full_hr {
+    width: 97.3%;
     height: 0.5px;
     background: #d8d8d8;
   }
@@ -1652,4 +1653,68 @@ header {
   .brands {
     display: none;
   }
+}
+
+.about_lookshop {
+  width: inherit;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #414141;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    width: 96%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .about_lookshop {
+    height: 180px;
+
+    p {
+      width: 97%;
+    }
+  }
+}
+
+@media screen and (max-width: 320px){
+  .about_lookshop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 320px){
+
+}
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 320px){
+
+}
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 320px){
+
 }
