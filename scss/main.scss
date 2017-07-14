@@ -1600,12 +1600,56 @@ header {
   }
 }
 
+.brands {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 60px;
 
+  .favor {
+    display: flex;
+    justify-content: space-between;
+
+    hr {
+      width: 42.1%;
+      height: 0.5px;
+      background: #d8d8d8;
+    }
+
+    span {
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #414141;
+    }
+  }
+
+  .favorite_brands {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: inherit;
+    height: 96px;
+  }
+
+  #full_hr {
+    height: 0.5px;
+    background: #d8d8d8;
+  }
+}
 
 @media screen and (max-width: 768px){
-
+  .brands {
+    .favor {
+      hr {
+        width: 37.1%;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 320px){
-
+  .brands {
+    display: none;
+  }
 }
