@@ -152,6 +152,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 
   .details {
@@ -487,7 +488,7 @@ header {
   }
 
   .menu_cart {
-    width: inherit;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -526,6 +527,7 @@ header {
 
   .menu_for_ipad {
     height: 48px;
+    width: 100%;
     margin-top: 11.5px;
 
     h1 {
@@ -1154,10 +1156,12 @@ header {
   display: flex;
   align-items: center;
 
+
   .products {
     width: 100%;
-    height: 395px;
+    height: auto;
     display: flex;
+    position: relative;
 
     .product {
       width: 220px;
@@ -1168,7 +1172,6 @@ header {
       align-items: center;
       position: relative;
       margin-left: 31px;
-      z-index: 1;
 
       .product_img {
         width: 220px;
@@ -1218,14 +1221,43 @@ header {
       .add_to_cart:hover {
         opacity: 0.9;
       }
+
+      .shop_it {
+        display: none;
+
+      }
+
+      .sale {
+        position: absolute;
+        top: 0;
+        left: 0;
+        }
+
     }
 
     .product:hover {
-      transform: scale(1.05);
-      height: 405px;
 
       .shop_it {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 134px;
+        height: 134px;
+        background: #3d3d3d;
+        border-radius: 70px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+
+        span {
+          font-size: 12px;
+          font-weight: 400;
+          color: #fff;
+          text-transform: uppercase;
+          margin-top: 9px;
+        }
       }
     }
   }
@@ -1240,10 +1272,7 @@ header {
   display: none;
 }
 
-.shop_it {
-  display: none;
 
-}
 
 @media screen and (max-width: 768px){
   .our_products {
@@ -1270,10 +1299,10 @@ header {
     height: auto;
 
     form {
-      width: inherit;
+      width: 100%;
 
       select {
-        width: inherit;
+        width: 100%;
         height: 44px;
         outline: none;
         border: none;
@@ -1288,18 +1317,24 @@ header {
 
   .our_products {
     width: 100%;
+
   }
 
   .content {
     height: 278px;
     align-items: flex-end;
+    width: 100%;
+    overflow-x: hidden;
 
     .products {
+      height: auto;
+
       .product {
         width: 137px;
         height: 262px;
         margin-left: 15.5px;
         transform: translateX(-8px);
+        position: relative;
 
         .product_img {
           width: 137px;
@@ -1330,6 +1365,12 @@ header {
             width: 8.5px;
             height: auto;
           }
+        }
+      }
+      .product:hover {
+
+        .shop_it {
+          display: none;
         }
       }
     }
@@ -1368,17 +1409,197 @@ header {
       opacity: 0.9;
     }
   }
-
 }
 
+.clearance {
+  width: inherit;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  .clearans {
+    width: inherit;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 22px;
+
+    hr {
+      width: 390px;
+      height: 0.5px;
+      background: #d8d8d8;
+    }
+  }
+
+  .cl_products {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: inherit;
+  }
+}
+
+.product {
+  width: 220px;
+  height: 395px;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  .product_img {
+    width: 220px;
+    height: 290px;
+  }
+
+  .product_title {
+    margin-top: 9px;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #373737;
+  }
+
+  .product_price {
+    margin-top: 9px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #373737;
+  }
+
+  .add_to_cart {
+    width: 120px;
+    height: 32px;
+    background: #fd926d;
+    border-bottom: 3px solid #dd6b44;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 9px;
+
+    span {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 400;
+      color: #fff;
+      margin-right: 10px;
+    }
+
+    img {
+      width: 11px;
+      height: auto;
+    }
+  }
+
+  .add_to_cart:hover {
+    opacity: 0.9;
+  }
+
+  .sale {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.prod_iphone {
+  display: none;
+}
 
 @media screen and (max-width: 768px){
+  .clearance {
 
+    .clearans {
+      hr {
+        width: 280px;
+      }
+    }
+
+    .cl_products {
+      overflow-x: hidden;
+    }
+  }
+
+  .hide_ipad {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 320px){
+  .clearance {
+    height: 370px;
+    .clearans {
+      img {
+        width: 80px;
+        height: auto;
+      }
+      hr {
+        width: 100px;
+      }
+    }
 
+    .cl_products {
+      overflow-x: hidden;
+    }
+  }
+
+  .hide_iphone {
+    display: none;
+  }
+
+  .prod_iphone {
+    display: flex;
+  }
+
+  .product {
+    width: 137px;
+    height: 262px;
+    margin-left: 15.5px;
+    transform: translateX(-8px);
+    position: relative;
+
+    .product_img {
+      width: 137px;
+      height: 181px;
+    }
+
+    .product_title {
+      margin-top: 6px;
+      font-size: 9px;
+    }
+
+    .product_price {
+      margin-top: 6px;
+      font-size: 14px;
+    }
+
+    .add_to_cart {
+      width: 110px;
+      height: 32px;
+      margin-top: 5.5px;
+
+      span {
+        font-size: 10px;
+        margin-right: 10px;
+      }
+
+      img {
+        width: 8.5px;
+        height: auto;
+      }
+    }
+  }
+
+  .load_more_iphone_2 {
+    background: #fff;
+  }
 }
+
 
 
 @media screen and (max-width: 768px){

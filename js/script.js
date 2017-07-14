@@ -17,10 +17,9 @@ $(document).ready(function(){
     slidesToScroll: 1,
     nextArrow: $(".next_arrow"),
     prevArrow: $(".prev_arrow"),
-    focusOnSelect: true,
-    centerMode: true,
-    centerPadding: true,
-    initialSlide: 4,
+    focusOnSelect: false,
+    centerMode: false,
+    centerPadding: '0px',
     responsive: [
       {
         breakpoint: 769,
@@ -39,7 +38,7 @@ $(document).ready(function(){
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          nextArrow: $(".load_more"),
+          nextArrow: $(".load_more_slick"),
         }
       }
     ]
