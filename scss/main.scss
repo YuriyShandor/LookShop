@@ -1630,6 +1630,10 @@ header {
     align-items: center;
     width: inherit;
     height: 96px;
+
+    img {
+      cursor: pointer;
+    }
   }
 
   #full_hr {
@@ -1645,6 +1649,10 @@ header {
       hr {
         width: 37.1%;
       }
+    }
+
+    .favorite_brands {
+      justify-content: space-around;
     }
   }
 }
@@ -1728,12 +1736,126 @@ header {
   }
 }
 
-@media screen and (max-width: 768px){
+#dif_inf {
+  width: 100%;
+  height: 198px;
+  background: #ededed;
+}
 
+.different_info {
+  width: inherit;
+  height: 198px;
+  display: flex;
+  justify-content: space-between;
+
+  .dif_info_block_1 {
+    width: 610px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    .info_column {
+      display: flex;
+      flex-direction: column;
+
+      width: auto;
+      height: auto;
+
+      h1 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 700;
+        color: #544f4d;
+      }
+
+      ul {
+        padding: 0;
+
+        li {
+          list-style: none;
+
+          a {
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 400;
+            color: #544f4d;
+            cursor: pointer;
+          }
+
+          a:hover {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+
+  .dif_info_block_2 {
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    .info_soc {
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 700;
+        color: #544f4d;
+      }
+
+      .soc_icons {
+        width: 125px;
+        height: 87px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 23px;
+
+        img:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .secured {
+      margin-top: 20px;
+      margin-right: 17px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  #dif_inf {
+    height: 347px;
+  }
+
+  .different_info {
+    height: auto;
+
+    .dif_info_block_1 {
+      width: 295px;
+      margin-left: 12px;
+
+      #stores {
+        margin-right: 37px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 320px){
-
+  #dif_inf {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px){
