@@ -22,7 +22,7 @@ $(document).ready(function(){
     centerPadding: '0px',
     responsive: [
       {
-        breakpoint: 769,
+        breakpoint: 1200,
 
         settings: {
           slidesToShow: 3.03,
@@ -32,7 +32,7 @@ $(document).ready(function(){
       },
 
       {
-        breakpoint: 321,
+        breakpoint: 768,
 
         settings: {
           slidesToShow: 2,

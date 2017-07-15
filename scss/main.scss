@@ -131,13 +131,13 @@ header {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .container {
     width: 730px;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 768px) {
   .container {
     width: 303px;
   }
@@ -458,7 +458,7 @@ header {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .menu {
     display: none;
   }
@@ -469,7 +469,7 @@ header {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 768px) {
   .logo_menu {
     height: 148px;
   }
@@ -490,7 +490,7 @@ header {
   .menu_cart {
     width: 100%;
     height: auto;
-    display: flex;
+    display: none;
     justify-content: center;
 
     .cart {
@@ -657,7 +657,7 @@ header {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
 
   .banner_buttons {
     margin-top: 17px;
@@ -699,7 +699,7 @@ header {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 768px) {
   .banner_buttons {
     display: none;
   }
@@ -813,7 +813,7 @@ header {
   }
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:768px) {
   #find {
     height: auto;
     background: none;
@@ -1001,7 +1001,7 @@ header {
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .best_party {
     margin-top: 33px;
 
@@ -1063,7 +1063,7 @@ header {
   }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 768px) {
   .best_party {
     display: none;
   }
@@ -1236,6 +1236,7 @@ header {
     }
 
     .product:hover {
+      box-shadow: 5px 5px 40px #333;
 
       .shop_it {
         display: flex;
@@ -1274,7 +1275,7 @@ header {
 
 
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .our_products {
     width: 750px;
   }
@@ -1288,15 +1289,16 @@ header {
   }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 768px){
   .goods_nav {
     display: none;
   }
 
   .charpet_for_iphone {
     display: flex;
-    width: 100%;
+    width: 303px;
     height: auto;
+    margin: 0 auto;
 
     form {
       width: 100%;
@@ -1316,14 +1318,14 @@ header {
   }
 
   .our_products {
-    width: 100%;
+    width: 303px;
 
   }
 
   .content {
     height: 278px;
     align-items: flex-end;
-    width: 100%;
+    width: 303px;
     overflow-x: hidden;
 
     .products {
@@ -1378,11 +1380,12 @@ header {
 
   .load_more_iphone {
     display: flex;
-    width: 100%;
+    width: 303px;
     height: 60px;
     justify-content: center;
     align-items: center;
     background: #fd926d;
+    margin: 0 auto;
 
     .load_more {
       height: 30px;
@@ -1511,7 +1514,7 @@ header {
   display: none;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .clearance {
 
     .clearans {
@@ -1530,7 +1533,7 @@ header {
   }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 768px) {
   .clearance {
     height: 370px;
     .clearans {
@@ -1628,7 +1631,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: inherit;
+    width: 100%;
     height: 96px;
 
     img {
@@ -1643,7 +1646,7 @@ header {
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .brands {
     .favor {
       hr {
@@ -1657,14 +1660,14 @@ header {
   }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 768px) {
   .brands {
     display: none;
   }
 }
 
 .about_lookshop {
-  width: inherit;
+  width: 100%;
   height: 160px;
   display: flex;
   flex-direction: column;
@@ -1679,25 +1682,26 @@ header {
   }
 
   p {
+    font-family: Arial;
     font-size: 14px;
     font-weight: 400;
     color: #999;
-    width: 96%;
+    width: 100%;
     text-align: center;
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px) and (max-width: 1199px){
   .about_lookshop {
     height: 180px;
 
     p {
-      width: 97%;
+      width: 100%;
     }
   }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 768px){
   .about_lookshop {
     display: none;
   }
@@ -1730,7 +1734,7 @@ header {
   }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 768px){
   #accept {
     display: none;
   }
@@ -1743,7 +1747,7 @@ header {
 }
 
 .different_info {
-  width: inherit;
+  width: 100%;
   height: 198px;
   display: flex;
   justify-content: space-between;
@@ -1833,7 +1837,7 @@ header {
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   #dif_inf {
     height: 347px;
   }
@@ -1843,7 +1847,6 @@ header {
 
     .dif_info_block_1 {
       width: 295px;
-      margin-left: 12px;
 
       #stores {
         margin-right: 37px;
@@ -1852,7 +1855,7 @@ header {
   }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 768px){
   #dif_inf {
     display: none;
   }
@@ -1917,7 +1920,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 768px){
   footer {
     height: 55px;
   }
@@ -1992,7 +1995,7 @@ footer {
 
     .license {
       margin-right: 10px;
-      
+
       span {
         font-size: 12px;
       }
