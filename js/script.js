@@ -12,6 +12,10 @@ $(document).ready(function(){
     $(this).addClass("arrow_click");
   });
 
+  $('.navbar-btn').on('click', function() {
+    $('.navbar-inner').toggleClass('in');
+  });
+
   $('.products').slick({
     slidesToShow: 4.71,
     slidesToScroll: 1,
