@@ -7,6 +7,8 @@ $(document).ready(function(){
     $(".content:nth-child("+ index +")").addClass("show");*/
   });
 
+  $('select').niceSelect();
+
   $(".arrow").click(function(){
     $(".arrow").removeClass("arrow_click");
     $(this).addClass("arrow_click");
