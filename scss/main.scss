@@ -104,6 +104,11 @@ header {
           background-color: #000;
         }
       }
+
+      &:after {
+        border-bottom: 2px solid #fff;
+        border-right: 2px solid #fff;
+      }
     }
   }
 
@@ -303,6 +308,11 @@ header {
       .option {
         width: 210px;
         padding-left: 12px;
+      }
+
+      &:after {
+        border-bottom: 2px solid #949393;
+        border-right: 2px solid #949393;
       }
     }
   }
@@ -1263,16 +1273,32 @@ header {
     form {
       width: 100%;
 
-      select {
+      .third_select {
         width: 100%;
         height: 44px;
         outline: none;
         border: none;
+        border-radius: 0;
         background: #f4845d;
         color: #fff;
         font-size: 15px;
         font-weight: 400;
         text-transform: uppercase;
+
+        .option {
+          color: #000;
+          width: 303px;
+
+          &:hover {
+            color: #fff;
+            background: #f4845d;
+          }
+        }
+
+        &:after {
+          border-bottom: 2px solid #fff;
+          border-right: 2px solid #fff;
+        }
       }
     }
   }
