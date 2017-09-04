@@ -1,10 +1,8 @@
 $(document).ready(function(){
+  $(".charpet:nth-child(1)").addClass("charpet_click");
   $(".charpet").click(function(){
     $(".charpet").removeClass("charpet_click");
     $(this).addClass("charpet_click");
-    /*var index = $(this).index()+1;
-    $(".content").removeClass("show");
-    $(".content:nth-child("+ index +")").addClass("show");*/
   });
 
   $('select').niceSelect();
@@ -26,6 +24,8 @@ $(document).ready(function(){
     focusOnSelect: false,
     centerMode: false,
     centerPadding: '0px',
+    autoplay: true,
+    autoplaySpeed: 5000,
     responsive: [
       {
         breakpoint: 1200,
@@ -61,6 +61,8 @@ $(document).ready(function(){
     initialSlide: 4,
     dots: true,
     dotsClass: "slick-dots_my",
+    autoplay: true,
+    autoplaySpeed: 5000,
     responsive: [
       {
         breakpoint: 769,
