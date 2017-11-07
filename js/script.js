@@ -16,34 +16,26 @@ $(document).ready(function(){
     $('.navbar-inner').toggleClass('in');
   });
 
-  $('.products').slick({
-    slidesToShow: 4.71,
+  var sliderNav = $('.products');
+  var maxItems = Math.round(sliderNav.parent('div').width() / 250);
+  if(sliderNav.children('div').length < maxItems) {
+    maxItems = sliderNav.children('div').length;
+  }
+
+  sliderNav.slick({
+    infinite: true,
+    variableWidth: true,
+    slidesToShow: maxItems,
     slidesToScroll: 1,
     nextArrow: $(".next_arrow"),
     prevArrow: $(".prev_arrow"),
-    focusOnSelect: false,
-    centerMode: false,
-    centerPadding: '0px',
     autoplay: true,
     autoplaySpeed: 5000,
     responsive: [
       {
-        breakpoint: 992,
-
-        settings: {
-          slidesToShow: 3.03,
-          slidesToScroll: 1,
-          infinite: true,
-        }
-      },
-
-      {
         breakpoint: 768,
 
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
           nextArrow: $(".load_more_slick"),
         }
       }
