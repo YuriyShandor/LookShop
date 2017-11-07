@@ -2227,6 +2227,12 @@ header {
   height: 22px;
 }
 
+@media screen and (max-width: 767px) {
+  .we_accept {
+    width: 535px;
+  }
+}
+
 @media screen and (max-width: 567px) {
   #accept {
     display: none;
@@ -2375,6 +2381,19 @@ header {
   }
   .different_info .dif_info_block_1 #stores {
     margin-right: 37px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .different_info .dif_info_block_2 {
+    width: 160px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
