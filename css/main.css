@@ -709,28 +709,23 @@ header {
 .navbar .nav-item {
   list-style: none;
   background: #fd926d;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
 }
 
 .navbar .nav-item:hover {
-  background: #000;
+  background: #fd7f54;
 }
 
 .navbar .navbar-inner {
+  display: none;
   background: #fd926d;
   position: absolute;
   right: 0;
   top: 100%;
-  visibility: hidden;
-  -webkit-transition: opacity 0.3s, visibility 0.3s;
-  transition: opacity 0.3s, visibility 0.3s;
   text-align: center;
-  z-index: 1;
-  width: auto;
-}
-
-.navbar .in {
-  opacity: 100;
-  visibility: visible;
+  z-index: 10;
+  width: 100%;
 }
 
 .navbar .nav {
@@ -807,9 +802,6 @@ header {
     margin-right: 13px;
   }
   .navbar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     margin-top: 12px;
   }
   .navbar .sr-only {
@@ -902,18 +894,11 @@ header {
 
 .slick_banner {
   width: 100%;
-  height: auto;
-}
-
-.slick_banner .img_ban {
-  width: 100%;
   height: 440px;
+  background: url(../img/banner.jpg) no-repeat center/cover;
 }
 
 .banner {
-  width: 100%;
-  height: 440px;
-  background: url(../img/banner.jpg) no-repeat center/cover;
   position: relative;
 }
 
@@ -962,10 +947,6 @@ header {
   .banner_buttons {
     margin-top: 17px;
   }
-  .banner_buttons .banner {
-    height: 350px;
-    background: url(../img/banner.jpg) no-repeat center/cover;
-  }
   .banner_buttons .banner .crazy_summer {
     height: 240px;
     position: absolute;
@@ -986,8 +967,14 @@ header {
     font-size: 12px;
     margin-right: 12px;
   }
-  .slick_banner .img_ban {
+  .slick_banner {
     height: 350px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slick_banner {
+    height: 260px;
   }
 }
 
@@ -1379,27 +1366,27 @@ header {
     margin-top: 33px;
   }
   .best_party .best img {
-    width: 364px;
+    width: 350px;
     height: auto;
   }
   .best_party .party {
-    margin-left: 2px;
+    margin-left: 10px;
   }
   .best_party .party #party_collection {
-    width: 364px;
+    width: 355px;
     height: auto;
   }
   .best_party .party .best_sell_fall .best_sell {
-    width: 180px;
-    height: 127px;
+    width: 175px;
+    height: 118px;
   }
   .best_party .party .best_sell_fall .best_sell div a {
     font-size: 26px;
     margin-right: 8px;
   }
   .best_party .party .best_sell_fall .fall_leather {
-    width: 180px;
-    height: 127px;
+    width: 175px;
+    height: 118px;
   }
   .best_party .party .best_sell_fall .fall_leather .fall_leather_shop {
     width: 92px;
@@ -1417,6 +1404,52 @@ header {
   .best_party .party .best_sell_fall .fall_leather .fall_leather_shop .butt_shop span {
     font-size: 10px;
     margin-right: 7px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .best_party {
+    margin-top: 33px;
+  }
+  .best_party .best img {
+    width: 264px;
+    height: auto;
+  }
+  .best_party .party {
+    margin-left: 5px;
+  }
+  .best_party .party #party_collection {
+    width: 260px;
+    height: auto;
+  }
+  .best_party .party .best_sell_fall .best_sell {
+    width: 125px;
+    height: 91px;
+  }
+  .best_party .party .best_sell_fall .best_sell div a {
+    font-size: 22px;
+    margin-right: 4px;
+  }
+  .best_party .party .best_sell_fall .fall_leather {
+    width: 125px;
+    height: 91px;
+  }
+  .best_party .party .best_sell_fall .fall_leather .fall_leather_shop {
+    width: 92px;
+    margin-top: 25px;
+    margin-left: -3px;
+  }
+  .best_party .party .best_sell_fall .fall_leather .fall_leather_shop a {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .best_party .party .best_sell_fall .fall_leather .fall_leather_shop .butt_shop {
+    width: 75px;
+    height: 15px;
+  }
+  .best_party .party .best_sell_fall .fall_leather .fall_leather_shop .butt_shop span {
+    font-size: 9px;
+    margin-right: 5px;
   }
 }
 
@@ -1968,6 +2001,23 @@ header {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .clearance .cl_products {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+  .hide_iphone {
+    display: none;
+  }
+  .prod_iphone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+}
+
 @media screen and (max-width: 567px) {
   .clearance {
     height: 370px;
@@ -1981,14 +2031,6 @@ header {
   }
   .clearance .cl_products {
     overflow-x: hidden;
-  }
-  .hide_iphone {
-    display: none;
-  }
-  .prod_iphone {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
   .product {
     width: 137px;
@@ -2060,6 +2102,7 @@ header {
   font-weight: 700;
   text-transform: uppercase;
   color: #414141;
+  text-align: center;
 }
 
 .brands .favorite_brands {

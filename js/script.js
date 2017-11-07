@@ -13,7 +13,7 @@ $(document).ready(function(){
   });
 
   $('.navbar-btn').on('click', function() {
-    $('.navbar-inner').toggleClass('in');
+    $('.navbar-inner').slideToggle("0.5s");
   });
 
   var sliderNav = $('.products');
@@ -33,7 +33,7 @@ $(document).ready(function(){
     autoplaySpeed: 5000,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 567,
 
         settings: {
           nextArrow: $(".load_more_slick"),
